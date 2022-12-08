@@ -39,7 +39,7 @@ public class AdminController {
     @GetMapping
     public String getUser(Model model) {
         model.addAttribute("userList", userService.getList());
-        return "user_admin";
+        return "index";
     }
 
     @GetMapping("/newAddUserAdmin")

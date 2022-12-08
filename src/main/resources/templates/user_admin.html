@@ -27,12 +27,12 @@
             <th>Action</th>
         </tr>
         <tr th:each="user : ${userList}">
-            <td th:utext="${user.getId()}">VALUE</td>
-            <td th:utext="${user.getName()}">VALUE</td>
-            <td th:utext="${user.getLastname()}">VALUE</td>
-            <td th:utext="${user.getAge()}">VALUE</td>
-            <td th:utext="${user.getEmail()}">VALUE</td>
-            <td th:utext="${user.getPassword()}">VALUE</td>
+            <td th:text="${user.getId()}">VALUE</td>
+            <td th:text="${user.getName()}">VALUE</td>
+            <td th:text="${user.getLastname()}">VALUE</td>
+            <td th:text="${user.getAge()}">VALUE</td>
+            <td th:text="${user.getEmail()}">VALUE</td>
+            <td th:text="${user.getPassword()}">VALUE</td>
             <td>
                 <div th:each="role:${user.getRoles()}">[[${role.getName()}]]</div>
             </td>
