@@ -19,6 +19,7 @@ import javax.persistence.Table;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 
 @Entity
@@ -178,5 +179,8 @@ public class User implements UserDetails {
                 ", password='" + password + '\'' +
                 ", roles=" + getRoles() +
                 '}';
+    }
+    public String getRoleString() {
+        return roles.stream().map(role -> role.getName().replace("ROLE_", "")).collect(Collectors.joining(" "));
     }
 }
